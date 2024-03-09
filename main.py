@@ -39,7 +39,7 @@ def main():
         st.write("Colab train mô hình Xception cuối [tại đây](https://colab.research.google.com/drive/12magZlRm7Nu0G2RQjkW5ICj6G5C3BoHk?ouid=111422511877040041683&usp=drive_link)")
         st.write("Model CNN")
         with st.spinner("Đang thực hiện load Model..."):
-            model = load_model("./cnnxceptionfinalmodel.h5", compile=False)
+            model = load_model("cnnxceptionfinalmodel.h5", compile=False)
             isLoaded = True
             pixels = 299
     elif choice == "Model TeachableMachine":
@@ -47,7 +47,7 @@ def main():
         st.write("Model Teachable Machine: Sử dụng dụng mô hình của teachable machine để dự đoán")
         st.write("Trang chủ  [Teachable Machine](https://teachablemachine.withgoogle.com/)")
         with st.spinner("Đang thực hiện load Model..."):
-            model = load_model("./tmmodel.h5", compile=False)
+            model = load_model("tmmodel.h5", compile=False)
             isLoaded = True
             pixels = 224
     else: st.write("Chưa chọn model!!!")
